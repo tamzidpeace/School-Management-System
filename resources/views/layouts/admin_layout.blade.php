@@ -367,7 +367,7 @@
                                             Add New Student</span></a></li>
 
                                 <li><a href="/admin/excel-import"><i class="icon-book"></i><span class="hidden-tablet">
-                                    Excel Import</span></a></li>
+                                            Excel Import</span></a></li>
 
                                 <li><a class="submenu" href="/admin/student-info"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Students Info</span></a></li>
@@ -387,6 +387,8 @@
                                             Class</span></a></li>
                                 <li><a class="submenu" href="/admin/section"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Section</span></a></li>
+                                <li><a class="submenu" href="/admin/class/syllabus"><i class="icon-file-alt"></i><span
+                                            class="hidden-tablet">Syllabus</span></a></li>
                             </ul>
                         </li>
 

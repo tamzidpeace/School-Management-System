@@ -12,6 +12,8 @@ use App\Student;
 use DB;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\StudentsImport;
+use App\Syllabus;
+use App\Syllabuss;
 
 
 class AdminController extends Controller
@@ -189,4 +191,42 @@ class AdminController extends Controller
     }
 
     // end of excel import & download
+
+    // syllabus
+    public function syllabus() {
+        $classes = SchoolClass::all();
+        $syllabuses = Syllabuss::all();
+        
+        return view('admin.class_section.syllabus', compact('classes', 'syllabuses'));
+    }
+
+    public function syllabusSave(Request $request) {
+        $syllabus = new Syllabuss;
+        
+        $syllabus->school_class_id = $request->class;
+        $syllabus->year = $request->year;
+
+        // file processing
+        $file = $request->file('syllabus');
+        $file_name = time() . '_' . $file->getClientOriginalName();
+        $file->move('syllabus/', $file_name);
+
+        $syllabus->syllabus = $file_name;
+
+        $syllabus->save();
+
+        return back()->with('success', 'Syllabus Upload');
+    }
+
+    public function downloadSyllabus($id) {
+        
+        $syllabus = Syllabuss::find($id);
+
+        //return $syllabus;
+
+         return response()
+         ->download(public_path('syllabus/' . $syllabus->syllabus));
+    }
+
+    // end of syllabus
 }
