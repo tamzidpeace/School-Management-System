@@ -365,6 +365,10 @@
                             <ul>
                                 <li><a href="/admin/select-class"><i class="icon-book"></i><span class="hidden-tablet">
                                             Add New Student</span></a></li>
+
+                                <li><a href="/admin/excel-import"><i class="icon-book"></i><span class="hidden-tablet">
+                                    Excel Import</span></a></li>
+
                                 <li><a class="submenu" href="/admin/student-info"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Students Info</span></a></li>
                             </ul>

@@ -44,5 +44,8 @@ Route::get('/admin/select-class', 'AdminController@selectClass');
 Route::get('/admin/add-new-student/{id}', 'AdminController@addNewStudent');
 Route::post('/admin/add-new-student', 'AdminController@addNewStudentSave');
 Route::get('/admin/student-info', 'AdminController@studentInfo');
+Route::get('/admin/excel-import', 'AdminController@excelImport');
+Route::post('/admin/excel-import', 'AdminController@excelImportSave');
+Route::get('/admin/excel-download', 'AdminController@excelDownload');
 
 

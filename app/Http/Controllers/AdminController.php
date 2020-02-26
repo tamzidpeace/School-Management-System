@@ -9,6 +9,10 @@ use App\Teacher;
 use App\SchoolClass;
 use App\Section;
 use App\Student;
+use DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\StudentsImport;
+
 
 class AdminController extends Controller
 {
@@ -121,14 +125,15 @@ class AdminController extends Controller
         }
     }
 
-    public function selectClass() {
+    public function selectClass()
+    {
         $classes = SchoolClass::all();
 
         return view('admin.student.select_class', compact('classes'));
     }
 
-    public function addNewStudent($id) {
-
+    public function addNewStudent($id)
+    {
         $sections = Section::where('school_class_id', $id)->pluck('section_name', 'id')->all();
 
         $class = SchoolClass::find($id);
@@ -136,8 +141,8 @@ class AdminController extends Controller
         return view('admin.student.add_new_student', compact('id', 'sections', 'class'));
     }
 
-    public function addNewStudentSave(Request $req) {
-
+    public function addNewStudentSave(Request $req)
+    {
         $student = new Student;
 
         // image processing
@@ -157,13 +162,31 @@ class AdminController extends Controller
         $student->save();
 
         return redirect()->back()->with('success', 'Student information added');
-        
     }
 
-    public function studentInfo() {
+    public function studentInfo()
+    {
         $students = Student::all();
         return view('admin.student.student_info', compact('students'));
     }
 
+    // excel import & download
+    public function excelImport()
+    {
+        return view('admin.student.excel_import');
+    }
 
+    public function excelImportSave(Request $request)
+    {
+        Excel::import(new StudentsImport, request()->file('excel'));
+
+        return redirect()->back()->with('success', 'Import Complete.');
+    }
+
+    public function excelDownload() {
+        return response()
+        ->download(public_path('excel/student_data.xlsx'));
+    }
+
+    // end of excel import & download
 }
