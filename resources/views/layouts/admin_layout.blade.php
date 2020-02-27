@@ -387,6 +387,8 @@
                                             Class</span></a></li>
                                 <li><a class="submenu" href="/admin/section"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Section</span></a></li>
+                                <li><a class="submenu" href="/admin/subjects"><i class="icon-file-alt"></i><span
+                                            class="hidden-tablet">Subject</span></a></li>
                                 <li><a class="submenu" href="/admin/class/syllabus"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Syllabus</span></a></li>
                             </ul>

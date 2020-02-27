@@ -47,9 +47,14 @@ Route::get('/admin/student-info', 'AdminController@studentInfo');
 Route::get('/admin/excel-import', 'AdminController@excelImport');
 Route::post('/admin/excel-import', 'AdminController@excelImportSave');
 Route::get('/admin/excel-download', 'AdminController@excelDownload');
+
 // syllabus
 Route::get('/admin/class/syllabus', 'AdminController@syllabus');
 Route::post('/admin/class/syllabus', 'AdminController@syllabusSave');
 Route::get('/admin/syllabus/download/{id}', 'AdminController@downloadSyllabus');
+
+// subjects
+Route::get('/admin/subjects', 'AdminClassRoutine@subjects');
+Route::post('/admin/subject/add', 'AdminClassRoutine@addSubject');
 
 

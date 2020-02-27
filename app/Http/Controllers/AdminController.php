@@ -15,7 +15,6 @@ use App\Imports\StudentsImport;
 use App\Syllabus;
 use App\Syllabuss;
 
-
 class AdminController extends Controller
 {
     //
@@ -185,7 +184,8 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Import Complete.');
     }
 
-    public function excelDownload() {
+    public function excelDownload()
+    {
         return response()
         ->download(public_path('excel/student_data.xlsx'));
     }
@@ -193,14 +193,16 @@ class AdminController extends Controller
     // end of excel import & download
 
     // syllabus
-    public function syllabus() {
+    public function syllabus()
+    {
         $classes = SchoolClass::all();
         $syllabuses = Syllabuss::all();
         
         return view('admin.class_section.syllabus', compact('classes', 'syllabuses'));
     }
 
-    public function syllabusSave(Request $request) {
+    public function syllabusSave(Request $request)
+    {
         $syllabus = new Syllabuss;
         
         $syllabus->school_class_id = $request->class;
@@ -218,13 +220,11 @@ class AdminController extends Controller
         return back()->with('success', 'Syllabus Upload');
     }
 
-    public function downloadSyllabus($id) {
-        
+    public function downloadSyllabus($id)
+    {
         $syllabus = Syllabuss::find($id);
-
-        //return $syllabus;
-
-         return response()
+        
+        return response()
          ->download(public_path('syllabus/' . $syllabus->syllabus));
     }
 
