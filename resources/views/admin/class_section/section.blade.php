@@ -31,6 +31,8 @@
 
     {!! Form::close() !!}
 
+    
+
 
 
     <table class="table table-bordered">

@@ -351,7 +351,7 @@
                                     class="hidden-tablet">Teacher</span></a>
                             <ul>
                                 <li><a href="/admin/teachers"><i class="icon-book"></i><span class="hidden-tablet">
-                                            All Teachers</span></a></li>
+                                            Teachers Info</span></a></li>
                                 <li><a class="submenu" href="/admin/teacher/add-new"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Add New Teacher</span></a></li>
                             </ul>
@@ -389,6 +389,9 @@
                                             class="hidden-tablet">Section</span></a></li>
                                 <li><a class="submenu" href="/admin/subjects"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Subject</span></a></li>
+                                <li><a class="submenu" href="/admin/class/section/class-routine"><i
+                                            class="icon-file-alt"></i><span class="hidden-tablet">Class
+                                            Routine</span></a></li>
                                 <li><a class="submenu" href="/admin/class/syllabus"><i class="icon-file-alt"></i><span
                                             class="hidden-tablet">Syllabus</span></a></li>
                             </ul>

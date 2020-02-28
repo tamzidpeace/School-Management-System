@@ -29,5 +29,15 @@ class DatabaseSeeder extends Seeder
             ['day' => 'Thusday'],
             ['day' => 'Friday'],
         ]);
+
+        DB::table('periods')->insert([
+            ['name' => 'Period 1'],
+            ['name' => 'Period 2'],
+            ['name' => 'Period 3'],
+            ['name' => 'Period 4'],
+            ['name' => 'Period 5'],
+            ['name' => 'Period 6'],
+            ['name' => 'Period 7'],
+        ]);
     }
 }

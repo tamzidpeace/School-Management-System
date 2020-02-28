@@ -57,4 +57,10 @@ Route::get('/admin/syllabus/download/{id}', 'AdminController@downloadSyllabus');
 Route::get('/admin/subjects', 'AdminClassRoutine@subjects');
 Route::post('/admin/subject/add', 'AdminClassRoutine@addSubject');
 
+// class-routine
+Route::get('/admin/class/section/class-routine', 'AdminClassRoutine@classRoutines');
+Route::get('/admin/class/section/class-routine/details/{id}', 'AdminClassRoutine@classRoutineDetails');
+Route::post('/admin/add-class-routine', 'AdminClassRoutine@addRoutine');
+Route::post('/admin/add-class-routine',);
+
 
