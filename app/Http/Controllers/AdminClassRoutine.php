@@ -9,6 +9,7 @@ use App\ClassRoutine;
 use App\Section;
 use App\Day;
 use App\Period;
+use DB;
 
 class AdminClassRoutine extends Controller
 {
@@ -35,14 +36,21 @@ class AdminClassRoutine extends Controller
         return back()->with('success', 'Subject added');
     }
 
-    public function classRoutines()
+    public function classRoutines(Request $request)
     {
         $routines = ClassRoutine::all();
 
-        $classes = SchoolClass::pluck('name', 'id')->all();
-        $sections = section::pluck('section_name', 'id')->all();
+        $classes = SchoolClass::all()->pluck('name', 'id');
+        //$sections = section::pluck('section_name', 'id')->all();
+
+        //
         
-        return view('admin.class_section.class_routine', compact('routines', 'classes', 'sections'));
+        return view('admin.class_section.class_routine', compact('routines', 'classes'));
+    }
+
+    public function getSections($id) {
+        $sections = Section::where('school_class_id', $id)->pluck('section_name', 'id');
+        return json_encode($sections);
     }
 
     public function addRoutine(Request $request)
@@ -52,9 +60,12 @@ class AdminClassRoutine extends Controller
         $routine->section_id = $request->section;
         $routine->school_class_id = $request->class;
 
+        
+        //
+
     
-        $routine->save();
-        return back()->with('success', 'Class Added');
+        //$routine->save();
+        //return back()->with('success', 'Class Added');
     }
 
     public function classRoutineDetails($id)
@@ -64,10 +75,12 @@ class AdminClassRoutine extends Controller
         $subjects = Subject::pluck('subject', 'subject')->all();
         $teachers = Subject::pluck('subject', 'subject')->all();
 
+        
         return view(
             'admin.class_section.class_routine_details',
             compact('days', 'periods', 'subjects', 'teachers', 'id')
         );
+    
     }
 
     public function addClassRoutineDetails(Request $request) {

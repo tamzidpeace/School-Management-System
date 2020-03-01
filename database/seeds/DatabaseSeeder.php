@@ -11,14 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
 
-        // DB::table('users')->insert([
-        //     ['role_id' => '1', 'name' => 'admin', 'email' => 'admin@lms.com', 'password' => bcrypt('11111111'), 'remember_token' =>  Str::random(10),],
-        //     ['role_id' => '2', 'name' => 'teacher', 'email' => 'teacher@lms.com', 'password' => bcrypt('11111111'), 'remember_token' =>  Str::random(10),],
-        // ]);
+        DB::table('users')->insert([
+            ['role_id' => '1', 'name' => 'admin', 'email' => 'admin@lms.com', 'password' => bcrypt('11111111'), 'remember_token' =>  Str::random(10),],
+            ['role_id' => '2', 'name' => 'teacher', 'email' => 'teacher@lms.com', 'password' => bcrypt('11111111'), 'remember_token' =>  Str::random(10),],
+        ]);
 
-        // DB::table('roles')->insert([['name' => 'Teacher'], ['name' => 'Admin'],]);
+        DB::table('roles')->insert([['name' => 'Teacher'], ['name' => 'Admin'],]);
 
         DB::table('days')->insert([
             ['day' => 'Satarday'],
@@ -38,6 +38,16 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Period 5'],
             ['name' => 'Period 6'],
             ['name' => 'Period 7'],
+        ]);
+
+        DB::table('school_classes')->insert([
+            ['name' => 'One'],
+            ['name' => 'Two'],
+            ['name' => 'Three'],
+            ['name' => 'Four'],
+            ['name' => 'Five'],
+            ['name' => 'Six'],
+            ['name' => 'Seven'],
         ]);
     }
 }

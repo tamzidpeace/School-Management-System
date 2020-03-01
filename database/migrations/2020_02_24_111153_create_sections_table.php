@@ -18,7 +18,7 @@ class CreateSectionsTable extends Migration
             $table->integer('school_class_id');
             $table->string('section_name');
             $table->timestamps();
-            $table->unique('school_class_id', 'section_name' );
+            $table->unique('section_name', 'school_class_id' );
         });
     }
 

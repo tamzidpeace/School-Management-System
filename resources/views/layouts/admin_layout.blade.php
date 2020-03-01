@@ -26,6 +26,12 @@
     <link
         href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext'
         rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- end: CSS -->
 
 
@@ -511,6 +517,9 @@
     </footer>
 
     <!-- start: JavaScript-->
+
+    
+
 
     <script src="{{asset('dashboard/js/jquery-1.9.1.min.js')}}"></script>
     <script src="{{asset('dashboard/js/jquery-migrate-1.0.0.min.js')}}"></script>
