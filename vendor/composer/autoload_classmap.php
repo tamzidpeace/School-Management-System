@@ -46,6 +46,7 @@ return array(
     'App\\Section' => $baseDir . '/app/Section.php',
     'App\\Student' => $baseDir . '/app/Student.php',
     'App\\Subject' => $baseDir . '/app/Subject.php',
+    'App\\SubjectAssign' => $baseDir . '/app/SubjectAssign.php',
     'App\\Syllabus' => $baseDir . '/app/Syllabus.php',
     'App\\Syllabuss' => $baseDir . '/app/Syllabuss.php',
     'App\\Teacher' => $baseDir . '/app/Teacher.php',

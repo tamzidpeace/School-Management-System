@@ -411,7 +411,7 @@
                             <ul>
                                 <li><a href="/admin/assign-teacher/section"><i class="icon-book"></i><span class="hidden-tablet">
                                             For Section</span></a></li>
-                                <li><a href="#"><i class="icon-book"></i><span class="hidden-tablet">
+                                <li><a href="/admin/assign-teacher/subject"><i class="icon-book"></i><span class="hidden-tablet">
                                             For Subject</span></a></li>
                             </ul>
                         </li>

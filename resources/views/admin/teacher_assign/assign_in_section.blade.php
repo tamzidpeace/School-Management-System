@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout')
 
 @section('content')
-<h1>Assign Teacher into section</h1>
+<h1>Assign Teacher for a Section</h1>
 
 <br>
 
@@ -13,7 +13,7 @@
     <select name="class" id="class" class="form-control">
         <option value="">----</option>
         @foreach ($classes as $key=>$value)
-            <option value=" {{$key}} ">{{$value}} </option>
+        <option value=" {{$key}} ">{{$value}} </option>
         @endforeach
     </select>
 
@@ -29,11 +29,11 @@
         <select name="teacher" id="teacher" class="form-control">
             <option value="">----</option>
             @foreach ($teachers as $key => $value)
-                <option value=" {{$key}} "> {{$value}} </option>
+            <option value=" {{$key}} "> {{$value}} </option>
             @endforeach
         </select>
     </div>
-    
+
     <div class="form-group">
         {!! Form::submit('SAVE', ['class' => 'btn btn-success']) !!}
     </div>
@@ -65,6 +65,5 @@
         });
     });
 </script>
-    
-@endsection
 
+@endsection

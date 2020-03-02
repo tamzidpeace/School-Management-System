@@ -70,5 +70,7 @@ Route::get('/getSections/{id}', 'AdminClassRoutine@getSections');
 // assign teacher
 Route::get('/admin/assign-teacher/section', 'AdminAssignTeacher@sectionAssign');
 Route::post('/admin/assign-teacher/section/save', 'AdminAssignTeacher@sectionAssignSave');
+Route::get('/admin/assign-teacher/subject', 'AdminAssignTeacher@subjectAssign');
+Route::post('/admin/assign-teacher/subject/save', 'AdminAssignTeacher@subjectAssignSave');
 
 

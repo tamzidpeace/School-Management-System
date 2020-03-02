@@ -534,6 +534,7 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
         'App\\Section' => __DIR__ . '/../..' . '/app/Section.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\Subject' => __DIR__ . '/../..' . '/app/Subject.php',
+        'App\\SubjectAssign' => __DIR__ . '/../..' . '/app/SubjectAssign.php',
         'App\\Syllabus' => __DIR__ . '/../..' . '/app/Syllabus.php',
         'App\\Syllabuss' => __DIR__ . '/../..' . '/app/Syllabuss.php',
         'App\\Teacher' => __DIR__ . '/../..' . '/app/Teacher.php',
