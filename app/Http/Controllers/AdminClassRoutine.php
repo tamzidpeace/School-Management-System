@@ -60,16 +60,13 @@ class AdminClassRoutine extends Controller
         $routine->section_id = $request->section;
         $routine->school_class_id = $request->class;
 
-        
-        //
-
-    
-        //$routine->save();
-        //return back()->with('success', 'Class Added');
+        $routine->save();
+        return back()->with('success', 'Class Added');
     }
 
     public function classRoutineDetails($id)
     {
+        return $id;
         $days = Day::pluck('day', 'id')->all();
         $periods = Period::pluck('name', 'id')->all();
         $subjects = Subject::pluck('subject', 'subject')->all();

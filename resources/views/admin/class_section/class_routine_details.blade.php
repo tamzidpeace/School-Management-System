@@ -4,7 +4,7 @@
 
 <h2>Add  Period Information</h2>
 
-{!! Form::open(['method' => 'POST', 'action' => 'AdminClassRoutine@classRoutineDetails', 'files'=> false]) !!}
+{!! Form::open(['method' => 'POST', 'action' => ['AdminClassRoutine@classRoutineDetails', $id], 'files'=> false]) !!}
 
 
 <div style="margin-top:15px;" class="form-group">

@@ -6,10 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\AssignTeacherIntoSection' => $baseDir . '/app/AssignTeacherIntoSection.php',
     'App\\ClassRoutine' => $baseDir . '/app/ClassRoutine.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Day' => $baseDir . '/app/Day.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminAssignTeacher' => $baseDir . '/app/Http/Controllers/AdminAssignTeacher.php',
     'App\\Http\\Controllers\\AdminClassRoutine' => $baseDir . '/app/Http/Controllers/AdminClassRoutine.php',
     'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

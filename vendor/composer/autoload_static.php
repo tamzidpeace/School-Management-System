@@ -494,10 +494,12 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
     );
 
     public static $classMap = array (
+        'App\\AssignTeacherIntoSection' => __DIR__ . '/../..' . '/app/AssignTeacherIntoSection.php',
         'App\\ClassRoutine' => __DIR__ . '/../..' . '/app/ClassRoutine.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Day' => __DIR__ . '/../..' . '/app/Day.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminAssignTeacher' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminAssignTeacher.php',
         'App\\Http\\Controllers\\AdminClassRoutine' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminClassRoutine.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

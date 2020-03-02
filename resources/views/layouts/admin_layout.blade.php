@@ -26,7 +26,7 @@
     <link
         href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext'
         rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> --}}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -402,6 +402,20 @@
                                             class="hidden-tablet">Syllabus</span></a></li>
                             </ul>
                         </li>
+                        {{-- end of class and section --}}
+
+                        {{-- Assign Teacher --}}
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
+                                    class="hidden-tablet">Assign Teacher</span></a>
+                            <ul>
+                                <li><a href="/admin/assign-teacher/section"><i class="icon-book"></i><span class="hidden-tablet">
+                                            For Section</span></a></li>
+                                <li><a href="#"><i class="icon-book"></i><span class="hidden-tablet">
+                                            For Subject</span></a></li>
+                            </ul>
+                        </li>
+                        {{-- end of assign teacher --}}
 
                         {{-- category --}}
 
@@ -518,7 +532,7 @@
 
     <!-- start: JavaScript-->
 
-    
+
 
 
     <script src="{{asset('dashboard/js/jquery-1.9.1.min.js')}}"></script>

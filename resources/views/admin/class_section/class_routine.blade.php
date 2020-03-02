@@ -9,7 +9,7 @@
 {{ csrf_field() }}
 
 <div style="margin-top:15px;" class="form-group">
-    <select name="class" id="class" class="form-control input-lg dynamic">
+    <select name="class" id="class" class="form-control input-lg">
         <option value="">Select Class</option>
         @foreach ($classes as $key=>$value)
         <option value=" {{$key}} ">{{$value}}</option>
@@ -19,7 +19,7 @@
 </div>
 
 <div style="margin-top:15px;" class="form-group">
-    <select name="section" id="section" class="form-control input-lg dynamic" >
+    <select name="section" id="section" class="form-control input-lg">
         <option value="">Select Section</option>
     </select>
 </div>
@@ -55,7 +55,7 @@
         </td>
     </tr>
     @endforeach
-    
+
 </table>
 
 <script>
