@@ -12,13 +12,15 @@ use App\SubjectAssign;
 class AdminAssignTeacher extends Controller
 {
     //
-    public function sectionAssign() {
+    public function sectionAssign()
+    {
         $classes = SchoolClass::all()->pluck('name', 'id');
         $teachers = Teacher::all()->pluck('name', 'id');
         return view('admin.teacher_assign.assign_in_section', compact('classes', 'teachers'));
     }
 
-    public function sectionAssignSave(Request $request) {
+    public function sectionAssignSave(Request $request)
+    {
         $assign = new AssignTeacherIntoSection;
 
         $assign->school_class_id = $request->class;
@@ -30,22 +32,23 @@ class AdminAssignTeacher extends Controller
         ['teacher_id', $assign->teacher_id]
         ])->first();
 
-        if($check) {
+        if ($check) {
             return back()->with('warning', 'Already assigned!');
         } else {
             $assign->save();
             return back()->with('success', 'Teacher assigned');
-        }        
+        }
     }
 
-    public function subjectAssign() {
+    public function subjectAssign()
+    {
         $subjects = Subject::all()->pluck('name', 'id');
         $teachers = Teacher::all()->pluck('name', 'id');
         return view('admin.teacher_assign.assign_in_subject', compact('subjects', 'teachers'));
     }
 
-    public function subjectAssignSave(Request $request) {
-        
+    public function subjectAssignSave(Request $request)
+    {
         $subject_id = $request->subject;
         $teacher_id = $request->teacher;
 
@@ -54,7 +57,7 @@ class AdminAssignTeacher extends Controller
         $check = SubjectAssign::where([['subject_id', $subject_id],
         ['teacher_id', $teacher_id]])->first();
 
-        if($check) {
+        if ($check) {
             return back()->with('warning', 'Already assigned');
         } else {
             $assign->subject_id = $subject_id;
@@ -63,6 +66,5 @@ class AdminAssignTeacher extends Controller
             $assign->save();
             return back()->with('success', 'teacher assigned to the subject');
         }
-
     }
 }

@@ -24,6 +24,11 @@
     </select>
 </div>
 
+<div style="margin-top:15px;" class="form-group">
+    <label for="max_period">Enter Max Number of Periods in a Day</label>
+    <input type="number" name="max_period" id="max_period">
+</div>
+
 <div class="form-group">
     {!! Form::submit('SAVE', ['class' => 'btn btn-success']) !!}
 </div>
@@ -39,7 +44,8 @@
         <th>#</th>
         <th>Section</th>
         <th>Class</th>
-        <th>Details</th>
+        <th>Periods</th>
+        <th>Routine</th>
     </tr>
 
     @php
@@ -51,8 +57,9 @@
         <td> {{$count++}} </td>
         <td> {{$routine->section->section_name}} </td>
         <td> {{$routine->schoolClass->name}} </td>
-        <td> <a href="/admin/class/section/class-routine/details/{{$routine->id}}" class="btn btn-primary">Details</a>
-        </td>
+        <td> <a href="/admin/class/section/class-routine/periods/{{$routine->id}}" class="btn btn-primary">Info</a></td>
+        <td> <a href="#" class="btn btn-primary">Info</a> </td>
+        
     </tr>
     @endforeach
 

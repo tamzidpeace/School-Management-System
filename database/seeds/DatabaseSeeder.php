@@ -30,15 +30,15 @@ class DatabaseSeeder extends Seeder
             ['day' => 'Friday'],
         ]);
 
-        DB::table('periods')->insert([
-            ['name' => 'Period 1'],
-            ['name' => 'Period 2'],
-            ['name' => 'Period 3'],
-            ['name' => 'Period 4'],
-            ['name' => 'Period 5'],
-            ['name' => 'Period 6'],
-            ['name' => 'Period 7'],
-        ]);
+        // DB::table('periods')->insert([
+        //     ['name' => 'Period 1'],
+        //     ['name' => 'Period 2'],
+        //     ['name' => 'Period 3'],
+        //     ['name' => 'Period 4'],
+        //     ['name' => 'Period 5'],
+        //     ['name' => 'Period 6'],
+        //     ['name' => 'Period 7'],
+        // ]);
 
         DB::table('school_classes')->insert([
             ['name' => 'One'],

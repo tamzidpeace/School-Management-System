@@ -48,7 +48,8 @@ class AdminClassRoutine extends Controller
         return view('admin.class_section.class_routine', compact('routines', 'classes'));
     }
 
-    public function getSections($id) {
+    public function getSections($id)
+    {
         $sections = Section::where('school_class_id', $id)->pluck('section_name', 'id');
         return json_encode($sections);
     }
@@ -59,29 +60,43 @@ class AdminClassRoutine extends Controller
 
         $routine->section_id = $request->section;
         $routine->school_class_id = $request->class;
+        $routine->max_period = $request->max_period;
 
         $routine->save();
-        return back()->with('success', 'Class Added');
+        return back()->with('success', 'Routine Added');
     }
 
-    public function classRoutineDetails($id)
+    public function periods($id)
     {
-        return $id;
-        $days = Day::pluck('day', 'id')->all();
-        $periods = Period::pluck('name', 'id')->all();
-        $subjects = Subject::pluck('subject', 'subject')->all();
-        $teachers = Subject::pluck('subject', 'subject')->all();
+        $routine = ClassRoutine::find($id);
+        $class = $routine->schoolClass->name;
+        $section = $routine->section->section_name;
+        $periods = Period::orderBy('order', 'asc')->get();
 
-        
         return view(
-            'admin.class_section.class_routine_details',
-            compact('days', 'periods', 'subjects', 'teachers', 'id')
+            'admin.class_section.periods',
+            compact('id', 'class', 'section', 'routine', 'periods')
         );
-    
     }
 
-    public function addClassRoutineDetails(Request $request) {
+    public function savePeriodInfo(Request $request, $id)
+    {
+        $period = new Period;
 
-        return $request;
+        $check_order = Period::where('order', $request->order)->first();
+
+        if ($check_order) {
+            return back()->with('warning', 'Period order already exist!');
+        } elseif ($request->order > $request->max_period) {
+            return back()->with('warning', 'Period Limit exceeds!');
+        } else {
+            $period->order = $request->order;
+            $period->class_routine_id = $id;
+            $period->name = $request->name;
+            $period->time = $request->time;
+
+            $period->save();
+            return back()->with('success', 'Period Added');
+        }
     }
 }

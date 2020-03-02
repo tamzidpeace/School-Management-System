@@ -14,20 +14,11 @@ class CreatePeriodsDetailsTable extends Migration
     public function up()
     {
         Schema::create('periods_details', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('class_routine_id');
+            $table->bigIncrements('id');            
             $table->integer('period_id');
             $table->integer('day_id');
-            $table->string('p1_subject')->nullable();
-            $table->string('p1_teacher')->nullable();
-            $table->string('p2_subject')->nullable();
-            $table->string('p2_teacher')->nullable();
-            $table->string('p3_subject')->nullable();
-            $table->string('p3_teacher')->nullable();
-            $table->string('p4_subject')->nullable();
-            $table->string('p4_teacher')->nullable();
-            $table->string('p5_subject')->nullable();
-            $table->string('p5_teacher')->nullable();
+            $table->integer('subject_id');
+            $table->integer('teacher_id');
             $table->timestamps();
         });
     }
