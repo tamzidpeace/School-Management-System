@@ -68,6 +68,22 @@ class AdminClassRoutine extends Controller
         return back()->with('success', 'Routine Added');
     }
 
+    public function updateRoutine($id) {
+        
+        $routine = ClassRoutine::find($id);
+        return view('admin.class_section.update_routine', compact('routine'));
+    }
+
+    public function updateRoutineSave(Request $request, $id) {
+        
+        $routine = ClassRoutine::find($id);
+        $routine->max_period = $request->max_period;
+        $routine->save();
+
+        return \redirect('/admin/class/section/class-routine')
+        ->with('success', 'Routine Updated');
+    }
+
     public function periods($id)
     {
         $routine = ClassRoutine::find($id);

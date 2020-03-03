@@ -35,7 +35,6 @@
 
 {!! Form::close() !!}
 
-{{-- ["" => "Select"] + $classes --}}
 
 <h2>Class Routines</h2>
 
@@ -63,7 +62,8 @@
         <td> <a href="/admin/class/section/class-routine/periods/{{$routine->id}}" class="btn btn-primary">Info</a></td>
         <td> <a href="/admin/class/section/class-routine/periods/details/{{$routine->id}}"
                 class="btn btn-primary">Info</a> </td>
-        <td> <a href="#" class="btn btn-primary">UPDATE</a> </td>
+        <td> <a href="/admin/update-class-routine/{{$routine->id}}" 
+            class="btn btn-primary">UPDATE</a> </td>
 
     </tr>
     @endforeach

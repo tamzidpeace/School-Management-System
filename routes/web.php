@@ -62,6 +62,8 @@ Route::post('/admin/subject/add', 'AdminClassRoutine@addSubject');
 // class-routine
 Route::get('/admin/class/section/class-routine', 'AdminClassRoutine@classRoutines')->name('classRoutine');
 Route::post('/admin/add-class-routine', 'AdminClassRoutine@addRoutine')->name('addRoutine');
+Route::get('/admin/update-class-routine/{id}', 'AdminClassRoutine@updateRoutine');
+Route::post('/admin/update-class-routine/{id}', 'AdminClassRoutine@updateRoutineSave');
 Route::get('/admin/class/section/class-routine/periods/{id}', 'AdminClassRoutine@periods');
 Route::post('/admin/class/section/class-routine/periods/save/{id}', 
 'AdminClassRoutine@savePeriodInfo');
