@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container">
+{{-- <div class="container">
     <div class="row">
         {{-- syllabus upload form --}}
-        <div class="col-md-8">
+        {{-- <div class="col-md-8"> --}} 
             <h3>Add New Subject</h3>
             <hr>
             <form class="" method="post" action="/admin/subject/add" enctype="multipart/form-data">
@@ -64,8 +64,8 @@
 
             </table>
 
-        </div>
+        {{-- </div>
     </div>
-</div>
+</div> --}}
 
 @endsection

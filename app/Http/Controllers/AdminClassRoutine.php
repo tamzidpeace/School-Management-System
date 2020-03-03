@@ -9,6 +9,8 @@ use App\ClassRoutine;
 use App\Section;
 use App\Day;
 use App\Period;
+use App\Teacher;
+use App\PeriodsDetail;
 use DB;
 
 class AdminClassRoutine extends Controller
@@ -97,6 +99,74 @@ class AdminClassRoutine extends Controller
 
             $period->save();
             return back()->with('success', 'Period Added');
+        }
+    }
+
+    public function periodDetails($id)
+    {
+        $periods = Period::where('class_routine_id', $id)->pluck('name', 'id');
+        $days = Day::pluck('day', 'id')->all();
+        $teachers = Teacher::pluck('name', 'id')->all();
+        $subjects = Subject::pluck('subject', 'id')->all();
+
+        $routine = ClassRoutine::find($id);
+        $max_period = $routine->max_period;
+
+        $pd = PeriodsDetail::where('day_id', 1)->orderBy('period_id')->get();
+        //return $pd;
+        
+        // for ($i=1; $i <= $max_period; $i++) { 
+        //     $pd[$i] = PeriodsDetail::where('period_id', $i)->get();
+        // }
+
+        // for ($i=1; $i <= $max_period; $i++) { 
+        //    foreach ($pd[$i] as $key => $value) {
+        //        echo $value;
+        //    }
+        // }
+
+
+        // return $pd;        
+
+        return view(
+            'admin.class_section.period_details',
+            \compact('id', 'periods', 'teachers', 'subjects', 'days', 'max_period', 'pd')
+        );
+    }
+    
+    public function savePeriodDetails(Request $request)
+    {
+        $pd = new PeriodsDetail;
+
+        //return $request;
+
+        $period_id = $request->period;
+        $day_id = $request->day;
+        $subject_id = $request->subject;
+        $teacher_id = $request->teacher;
+
+        $details = PeriodsDetail::where(
+            [ ['period_id', $period_id], ['day_id', $day_id], ]
+        )->first();
+
+        if ($details) {
+            $details->period_id = $period_id;
+            $details->day_id = $day_id;
+            $details->subject_id = $subject_id;
+            $details->teacher_id = $teacher_id;
+
+            $details->save();
+
+            return back()->with('success', 'period info updated');
+        } else {
+            $pd->period_id = $period_id;
+            $pd->day_id = $day_id;
+            $pd->subject_id = $subject_id;
+            $pd->teacher_id = $teacher_id;
+
+            $pd->save();
+
+            return back()->with('success', 'new period info added');
         }
     }
 }

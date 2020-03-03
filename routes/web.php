@@ -65,6 +65,12 @@ Route::post('/admin/add-class-routine', 'AdminClassRoutine@addRoutine')->name('a
 Route::get('/admin/class/section/class-routine/periods/{id}', 'AdminClassRoutine@periods');
 Route::post('/admin/class/section/class-routine/periods/save/{id}', 
 'AdminClassRoutine@savePeriodInfo');
+Route::get('/admin/class/section/class-routine/periods/details/{id}',
+'AdminClassRoutine@periodDetails');
+Route::post('/admin/class/section/class-routine/periods/details/save', 
+'AdminClassRoutine@savePeriodDetails');
+
+// ajax get
 Route::get('/getSections/{id}', 'AdminClassRoutine@getSections');
 //Route::post('/admin/add-class-routine', '');
 

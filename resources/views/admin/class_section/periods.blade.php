@@ -50,56 +50,11 @@
         <td> {{$period->order}} </td>
         <td> {{$period->name}} </td>
         <td> {{$period->time}} </td>
-        <td> <a href="#" class="btn btn-primary">EDIT</a> </td>
+        <td> <a href="#" class="btn btn-primary">UPDATE</a> </td>
     </tr>    
     @endforeach
     
 
 </table>
-
-
-{{-- <h2>Class Routine Details</h2>
-
-<table class="table table-bordered">
-    <tr class="info">
-        <th>Day/Period</th>
-        <th>Satarday</th>
-        <th>Sunday</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thusday</th>
-    </tr>
-
-    @php
-    $count = 1;
-    @endphp
-
-    <tr>
-        <td>Period 1</td>
-    </tr>
-    <tr>
-        <td>Period 2</td>
-    </tr>
-    <tr>
-        <td>Period 3</td>
-    </tr>
-    <tr>
-        <td>Period 4</td>
-    </tr>
-    <tr>
-        <td>Period 5</td>
-    </tr>    
-
-    {{-- @foreach ($routines as $routine)
-    <tr>
-        <td> {{$count++}} </td>
-<td> {{$routine->section->section_name}} </td>
-<td> {{$routine->schoolClass->name}} </td>
-<td> <a href="#" class="btn btn-primary">Details</a></td>
-</tr>
-@endforeach --}}
-
-{{-- </table>  --}}
 
 @endsection

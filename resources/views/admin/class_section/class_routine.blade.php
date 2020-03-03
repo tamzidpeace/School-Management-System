@@ -44,8 +44,10 @@
         <th>#</th>
         <th>Section</th>
         <th>Class</th>
-        <th>Periods</th>
+        <th>Max Period</th>
+        <th>Periods</th>        
         <th>Routine</th>
+        <th>Action</th>
     </tr>
 
     @php
@@ -57,9 +59,12 @@
         <td> {{$count++}} </td>
         <td> {{$routine->section->section_name}} </td>
         <td> {{$routine->schoolClass->name}} </td>
+        <td> {{$routine->max_period}} </td>
         <td> <a href="/admin/class/section/class-routine/periods/{{$routine->id}}" class="btn btn-primary">Info</a></td>
-        <td> <a href="#" class="btn btn-primary">Info</a> </td>
-        
+        <td> <a href="/admin/class/section/class-routine/periods/details/{{$routine->id}}"
+                class="btn btn-primary">Info</a> </td>
+        <td> <a href="#" class="btn btn-primary">UPDATE</a> </td>
+
     </tr>
     @endforeach
 
