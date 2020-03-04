@@ -14,6 +14,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\StudentsImport;
 use App\Syllabus;
 use App\Syllabuss;
+use App\SchoolInformation;
 
 class AdminController extends Controller
 {
@@ -229,4 +230,41 @@ class AdminController extends Controller
     }
 
     // end of syllabus
+
+    // school information
+
+    public function schoolInfo()
+    {
+        $info = SchoolInformation::where('id', 1)->first();
+        return view('admin.school.info', compact('info'));
+    }
+
+    public function updateInfo()
+    {
+        $info = SchoolInformation::where('id', 1)->first();
+        return view('admin.school.update_info', compact('info'));
+    }
+
+    public function updateInfoSave(Request $request)
+    {
+        $info = new SchoolInformation;
+        $uinfo = SchoolInformation::where('id', 1)->first();
+
+        if ($uinfo) {
+            $uinfo->name = $request->name;
+            $uinfo->about = $request->about;
+            
+            $uinfo->save();
+        } else {
+            $info->name = $request->name;
+            $info->about = $request->about;
+            
+            $info->save();
+        }
+
+        return redirect('/admin/school/info/')->with('success', 'information updated');
+    }
+
+    // end of school information
+    
 }

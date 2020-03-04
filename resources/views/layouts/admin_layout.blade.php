@@ -19,6 +19,7 @@
     <!-- end: Mobile Specific -->
 
     <!-- start: CSS -->
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <link id="bootstrap-style" href="{{asset('dashboard/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
     <link id="base-style" href="{{asset('dashboard/css/style.css')}}" rel="stylesheet">
@@ -421,18 +422,12 @@
 
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
-                                    class="hidden-tablet">Tutorial</span></a>
+                                    class="hidden-tablet">School</span></a>
                             <ul>
-                                <li><a href="/admin/category"><i class="icon-book"></i><span class="hidden-tablet">
-                                            Category</span></a></li>
+                                <li><a href="/admin/school/info"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Information</span></a></li>
 
-                                <li><a href="/admin/tutorial/all"><i class="icon-book"></i><span class="hidden-tablet">
-                                            All Tutorials</span></a></li>
-                                <li><a class="submenu" href="/admin/tutorial/pending"><i class="icon-file-alt"></i><span
-                                            class="hidden-tablet">Pending Tutorials</span></a></li>
-                                <li><a class="submenu" href="/admin/tutorial/published"><i
-                                            class="icon-file-alt"></i><span class="hidden-tablet">Published
-                                            Tutorials</span></a></li>
+                                
                             </ul>
                         </li>
 

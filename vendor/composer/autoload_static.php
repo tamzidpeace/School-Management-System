@@ -531,6 +531,7 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
         'App\\SchoolClass' => __DIR__ . '/../..' . '/app/SchoolClass.php',
+        'App\\SchoolInformation' => __DIR__ . '/../..' . '/app/SchoolInformation.php',
         'App\\Section' => __DIR__ . '/../..' . '/app/Section.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\Subject' => __DIR__ . '/../..' . '/app/Subject.php',

@@ -67,13 +67,18 @@
     $count = 1;
     @endphp
 
-    @foreach ($pd as $p)
-        <tr>
-            <td> {{$p->period_id}} </td>
-            <td> {{$p->subject_id . $p->teacher_id }} </td>
+    @for ($i = 1; $i <= $max_period; $i++)
+    <tr>
+        <td>Period {{$i}} </td>
+        
+        <td> 
             
-        </tr>
-    @endforeach
+            {{ $ar[1]->id }}
+            {{$ar[1]->teacher_id}}
+        </td>
+    </tr>
+    @endfor
+    
 
 
 

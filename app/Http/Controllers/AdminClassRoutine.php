@@ -147,24 +147,17 @@ class AdminClassRoutine extends Controller
 
         $pd = PeriodsDetail::where('day_id', 1)->orderBy('period_id')->get();
         
-        //return $pd;
+        $i = 1;
+        $ar;
+        foreach ($pd as $p) {
+            $ar[$i++] = $p;
+        }
         
-        // for ($i=1; $i <= $max_period; $i++) { 
-        //     $pd[$i] = PeriodsDetail::where('period_id', $i)->get();
-        // }
-
-        // for ($i=1; $i <= $max_period; $i++) { 
-        //    foreach ($pd[$i] as $key => $value) {
-        //        echo $value;
-        //    }
-        // }
-
-
-        // return $pd;        
+        //return $ar[1]->id;
 
         return view(
             'admin.class_section.period_details',
-            \compact('id', 'periods', 'teachers', 'subjects', 'days', 'max_period', 'pd')
+            \compact('id', 'periods', 'teachers', 'subjects', 'days', 'max_period', 'pd', 'ar')
         );
     }
     

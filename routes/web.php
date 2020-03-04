@@ -76,7 +76,7 @@ Route::post('/admin/update-period/{id}', 'AdminClassRoutine@updatePeriodSave');
 
 // ajax get
 Route::get('/getSections/{id}', 'AdminClassRoutine@getSections');
-//Route::post('/admin/add-class-routine', '');
+
 
 
 // assign teacher
@@ -85,4 +85,9 @@ Route::post('/admin/assign-teacher/section/save', 'AdminAssignTeacher@sectionAss
 Route::get('/admin/assign-teacher/subject', 'AdminAssignTeacher@subjectAssign');
 Route::post('/admin/assign-teacher/subject/save', 'AdminAssignTeacher@subjectAssignSave');
 
+
+// school
+Route::get('/admin/school/info', 'AdminController@schoolInfo');
+Route::get('/admin/school/info/update', 'AdminController@updateInfo');
+Route::post('/admin/school/info/update/save', 'AdminController@updateInfoSave');
 

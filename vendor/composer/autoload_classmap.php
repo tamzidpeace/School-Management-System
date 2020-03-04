@@ -43,6 +43,7 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Role' => $baseDir . '/app/Role.php',
     'App\\SchoolClass' => $baseDir . '/app/SchoolClass.php',
+    'App\\SchoolInformation' => $baseDir . '/app/SchoolInformation.php',
     'App\\Section' => $baseDir . '/app/Section.php',
     'App\\Student' => $baseDir . '/app/Student.php',
     'App\\Subject' => $baseDir . '/app/Subject.php',
