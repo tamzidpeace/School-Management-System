@@ -71,6 +71,8 @@ Route::get('/admin/class/section/class-routine/periods/details/{id}',
 'AdminClassRoutine@periodDetails');
 Route::post('/admin/class/section/class-routine/periods/details/save', 
 'AdminClassRoutine@savePeriodDetails');
+Route::get('/admin/update-period/{id}', 'AdminClassRoutine@updatePeriod');
+Route::post('/admin/update-period/{id}', 'AdminClassRoutine@updatePeriodSave');
 
 // ajax get
 Route::get('/getSections/{id}', 'AdminClassRoutine@getSections');

@@ -118,6 +118,23 @@ class AdminClassRoutine extends Controller
         }
     }
 
+    public function updatePeriod($id) {
+        $period = Period::where('id', $id)->first();
+
+        return view('admin.class_section.update_period', compact('period'));
+    }
+
+    public function updatePeriodSave(Request $request, $id) {
+        $period = Period::find($id);
+        $period->order = $request->order;
+        $period->name = $request->name;
+        $period->time = $request->time;
+
+        $period->save();
+        return \redirect('/admin/class/section/class-routine/periods/'
+        .$period->class_routine_id)->with('success', 'period info updated!');
+    }
+
     public function periodDetails($id)
     {
         $periods = Period::where('class_routine_id', $id)->pluck('name', 'id');
@@ -129,6 +146,7 @@ class AdminClassRoutine extends Controller
         $max_period = $routine->max_period;
 
         $pd = PeriodsDetail::where('day_id', 1)->orderBy('period_id')->get();
+        
         //return $pd;
         
         // for ($i=1; $i <= $max_period; $i++) { 

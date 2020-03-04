@@ -36,10 +36,10 @@
         <th>#</th>
         <th>Period Order</th>
         <th>Title</th>
-        <th>Time</th> 
-        <th>Action</th>       
+        <th>Time</th>
+        <th>Action</th>
     </tr>
-    
+
     @php
     $count = 1;
     @endphp
@@ -50,10 +50,10 @@
         <td> {{$period->order}} </td>
         <td> {{$period->name}} </td>
         <td> {{$period->time}} </td>
-        <td> <a href="#" class="btn btn-primary">UPDATE</a> </td>
-    </tr>    
+        <td> <a href="/admin/update-period/{{$period->id}}" class="btn btn-primary">UPDATE</a> </td>
+    </tr>
     @endforeach
-    
+
 
 </table>
 
