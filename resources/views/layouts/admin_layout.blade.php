@@ -28,6 +28,8 @@
         href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext'
         rel='stylesheet' type='text/css'>
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> --}}
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
+    {{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> --}}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -418,7 +420,7 @@
                         </li>
                         {{-- end of assign teacher --}}
 
-                        {{-- category --}}
+                        {{-- School Information --}}
 
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
@@ -431,15 +433,18 @@
                             </ul>
                         </li>
 
-                        {{-- end category --}}
+                        {{-- end School Information --}}
 
-                        <li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI
-                                    Features</span></a></li>
-                        <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet">
-                                    Widgets</span></a></li>
+                        {{-- send email --}}
+
+                        <li><a href="/admin/mail"><i class="icon-book"></i><span class="hidden-tablet">
+                            Send Email</span></a></li>
+
+                        {{-- end of send email --}}
+                        
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
-                                    class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3
+                                    class="hidden-tablet">Dropdown</span><span class="label label-important"> 
                                 </span></a>
                             <ul>
                                 <li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span
