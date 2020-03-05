@@ -67,15 +67,26 @@
     $count = 1;
     @endphp
 
+    
+
     @for ($i = 1; $i <= $max_period; $i++)
     <tr>
         <td>Period {{$i}} </td>
         
-        <td> 
-            
-            {{ $ar[1]->id }}
-            {{$ar[1]->teacher_id}}
-        </td>
+        @if ($data[$i]['teacher_id'] !=0 )
+        <td> {{$data[$i]['teacher_id']}} </td>
+        @else 
+        <td> blank </td>
+        @endif
+
+        @if ($data2[$i]['teacher_id'] !=0 )
+        <td> {{$data2[$i]['teacher_id']}} </td>
+        @else 
+        <td> blank </td>
+        @endif
+        
+        
+        
     </tr>
     @endfor
     

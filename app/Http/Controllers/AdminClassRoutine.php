@@ -68,14 +68,14 @@ class AdminClassRoutine extends Controller
         return back()->with('success', 'Routine Added');
     }
 
-    public function updateRoutine($id) {
-        
+    public function updateRoutine($id)
+    {
         $routine = ClassRoutine::find($id);
         return view('admin.class_section.update_routine', compact('routine'));
     }
 
-    public function updateRoutineSave(Request $request, $id) {
-        
+    public function updateRoutineSave(Request $request, $id)
+    {
         $routine = ClassRoutine::find($id);
         $routine->max_period = $request->max_period;
         $routine->save();
@@ -118,13 +118,15 @@ class AdminClassRoutine extends Controller
         }
     }
 
-    public function updatePeriod($id) {
+    public function updatePeriod($id)
+    {
         $period = Period::where('id', $id)->first();
 
         return view('admin.class_section.update_period', compact('period'));
     }
 
-    public function updatePeriodSave(Request $request, $id) {
+    public function updatePeriodSave(Request $request, $id)
+    {
         $period = Period::find($id);
         $period->order = $request->order;
         $period->name = $request->name;
@@ -145,19 +147,55 @@ class AdminClassRoutine extends Controller
         $routine = ClassRoutine::find($id);
         $max_period = $routine->max_period;
 
-        $pd = PeriodsDetail::where('day_id', 1)->orderBy('period_id')->get();
-        
+        $pd = PeriodsDetail::select(['id', 'period_id', 'day_id', 'subject_id', 'teacher_id'])
+        ->where('day_id', 1)->orderBy('period_id')->get();
+        $pd2 = PeriodsDetail::select(['id', 'period_id', 'day_id', 'subject_id', 'teacher_id'])
+        ->where('day_id', 2)->orderBy('period_id')->get();
+        //day 1
+        for ($i=1; $i<=$max_period; $i++) {
+            $data[$i] = ['id'=> 0, 'period_id' => $i, 'day_id'=> 1,
+            'subject_id'=> 0, 'teacher_id' => 0];
+        }
+
+        //day 2
+        for ($i=1; $i<=$max_period; $i++) {
+            $data2[$i] = ['id'=> 0, 'period_id' => $i, 'day_id'=> 2,
+            'subject_id'=> 0, 'teacher_id' => 0];
+        }
+
         $i = 1;
         $ar;
         foreach ($pd as $p) {
             $ar[$i++] = $p;
         }
-        
-        //return $ar[1]->id;
+        $count = count($ar);
+
+        //
+        $i = 1;
+        $ar2;
+        foreach ($pd2 as $p) {
+            $ar2[$i++] = $p;
+        }
+        $count2 = count($ar2);
+       
+        for ($i=1; $i<=$count; $i++) {            
+            $data[$ar[$i]->period_id] = 
+            ['id'=> $ar[$i]->id, 'period_id' => $i,
+            'day_id'=> 1, 'subject_id'=> $ar[$i]->subject_id,
+            'teacher_id' => $ar[$i]->teacher_id];                                   
+        }
+
+        for ($i=1; $i<=$count2; $i++) {            
+            $data2[$ar2[$i]->period_id] = 
+            ['id'=> $ar2[$i]->id, 'period_id' => $i,
+            'day_id'=> 1, 'subject_id'=> $ar2[$i]->subject_id,
+            'teacher_id' => $ar2[$i]->teacher_id];                                   
+        }
 
         return view(
             'admin.class_section.period_details',
-            \compact('id', 'periods', 'teachers', 'subjects', 'days', 'max_period', 'pd', 'ar')
+            \compact('id', 'periods', 'teachers', 'subjects', 'days', 'max_period',
+             'pd', 'data', 'data2')
         );
     }
     
