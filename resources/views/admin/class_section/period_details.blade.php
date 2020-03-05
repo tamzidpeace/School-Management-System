@@ -84,6 +84,7 @@
         @else 
         <td> blank </td>
         @endif
+        <td>2</td>
         
         
         

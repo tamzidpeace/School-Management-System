@@ -1,8 +1,6 @@
-{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> --}}
 @extends('layouts.admin_layout')
 
 @section('content')
-
 
 {{-- update information table --}}
 {!! Form::open(['method'=>'get', 'action'=>'EmailController@adminSendMail']) !!}
@@ -13,7 +11,7 @@
 
 <div class="form-group">
     <label for="sc-name">Email</label>
-    <input type="email" name="email" value="" id="sc-name" class="form-control"
+    <input type="email" name="email" value="{{$val}} " id="sc-name" class="form-control"
         placeholder="Receiver Email">
 </div>
 
@@ -31,5 +29,5 @@
 <input type="submit" value="Send Mail" class="btn btn-primary">
 
 {!! Form::close() !!}
-
+    
 @endsection

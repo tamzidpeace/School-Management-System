@@ -93,5 +93,12 @@ Route::post('/admin/school/info/update/save', 'AdminController@updateInfoSave');
 
 
 // email send
-Route::get('/admin/mail', 'EmailController@adminMail');
+Route::get('/admin/mail/', 'EmailController@adminMail');
 Route::get('/admin/send-mail', 'EmailController@adminSendMail');
+Route::get('/admin/mail/user/{email}', 'EmailController@adminUserMail');
+
+// users
+Route::get('/admin/users', 'AdminController@users');
+
+// Notice
+

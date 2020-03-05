@@ -15,6 +15,8 @@ use App\Imports\StudentsImport;
 use App\Syllabus;
 use App\Syllabuss;
 use App\SchoolInformation;
+use Session;
+
 
 class AdminController extends Controller
 {
@@ -23,6 +25,11 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin.dashboard');
+    }
+
+    public function users() {
+        $users = User::all();
+        return view('admin.user.users', compact('users'));
     }
 
     public function teacherRegistration()

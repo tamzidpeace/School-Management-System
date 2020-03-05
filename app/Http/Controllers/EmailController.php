@@ -25,4 +25,9 @@ class EmailController extends Controller
         
         return back()->with('success', 'Email Send');
     }
+
+    public function adminUserMail($val) {
+        
+        return view('admin.user_send_mail', compact('val'));
+    }
 }
