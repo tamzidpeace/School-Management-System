@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Accountant' => $baseDir . '/app/Accountant.php',
     'App\\AssignTeacherIntoSection' => $baseDir . '/app/AssignTeacherIntoSection.php',
     'App\\ClassRoutine' => $baseDir . '/app/ClassRoutine.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -23,6 +24,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\EmailController' => $baseDir . '/app/Http/Controllers/EmailController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\WebController' => $baseDir . '/app/Http/Controllers/WebController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Admin' => $baseDir . '/app/Http/Middleware/Admin.php',
@@ -48,6 +50,7 @@ return array(
     'App\\SchoolClass' => $baseDir . '/app/SchoolClass.php',
     'App\\SchoolInformation' => $baseDir . '/app/SchoolInformation.php',
     'App\\Section' => $baseDir . '/app/Section.php',
+    'App\\Staff' => $baseDir . '/app/Staff.php',
     'App\\Student' => $baseDir . '/app/Student.php',
     'App\\Subject' => $baseDir . '/app/Subject.php',
     'App\\SubjectAssign' => $baseDir . '/app/SubjectAssign.php',

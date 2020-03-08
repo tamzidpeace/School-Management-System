@@ -494,6 +494,7 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
     );
 
     public static $classMap = array (
+        'App\\Accountant' => __DIR__ . '/../..' . '/app/Accountant.php',
         'App\\AssignTeacherIntoSection' => __DIR__ . '/../..' . '/app/AssignTeacherIntoSection.php',
         'App\\ClassRoutine' => __DIR__ . '/../..' . '/app/ClassRoutine.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -511,6 +512,7 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmailController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\WebController' => __DIR__ . '/../..' . '/app/Http/Controllers/WebController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Admin' => __DIR__ . '/../..' . '/app/Http/Middleware/Admin.php',
@@ -536,6 +538,7 @@ class ComposerStaticInitf912ee62983787da82ad9a803736e16a
         'App\\SchoolClass' => __DIR__ . '/../..' . '/app/SchoolClass.php',
         'App\\SchoolInformation' => __DIR__ . '/../..' . '/app/SchoolInformation.php',
         'App\\Section' => __DIR__ . '/../..' . '/app/Section.php',
+        'App\\Staff' => __DIR__ . '/../..' . '/app/Staff.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\Subject' => __DIR__ . '/../..' . '/app/Subject.php',
         'App\\SubjectAssign' => __DIR__ . '/../..' . '/app/SubjectAssign.php',

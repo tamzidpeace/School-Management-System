@@ -385,6 +385,41 @@
 
                         {{-- end of students --}}
 
+                        {{-- Accountants --}}
+
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
+                                    class="hidden-tablet">Accountant</span></a>
+                            <ul>
+                                <li><a href="/admin/user/accountants"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Accountants</span></a></li>
+
+                                <li><a href="#"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Add Accountant</span></a></li>
+
+                            </ul>
+                        </li>
+
+                        {{-- end of Accountants --}}
+
+                        {{-- Staff --}}
+
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
+                                    class="hidden-tablet">Staff</span></a>
+                            <ul>
+                                <li><a href="/admin/user/staffs"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Staffs</span></a></li>
+                            </ul>
+
+                            <ul>
+                                <li><a href="/admin/user/staff/add"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Add Staff</span></a></li>
+                            </ul>
+                        </li>
+
+                        {{-- end of staffs --}}
+
                         </li>
 
                         {{-- class & section --}}
@@ -412,9 +447,11 @@
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
                                     class="hidden-tablet">Assign Teacher</span></a>
                             <ul>
-                                <li><a href="/admin/assign-teacher/section"><i class="icon-book"></i><span class="hidden-tablet">
+                                <li><a href="/admin/assign-teacher/section"><i class="icon-book"></i><span
+                                            class="hidden-tablet">
                                             For Section</span></a></li>
-                                <li><a href="/admin/assign-teacher/subject"><i class="icon-book"></i><span class="hidden-tablet">
+                                <li><a href="/admin/assign-teacher/subject"><i class="icon-book"></i><span
+                                            class="hidden-tablet">
                                             For Subject</span></a></li>
                             </ul>
                         </li>
@@ -429,7 +466,7 @@
                                 <li><a href="/admin/school/info"><i class="icon-book"></i><span class="hidden-tablet">
                                             Information</span></a></li>
 
-                                
+
                             </ul>
                         </li>
 
@@ -438,7 +475,7 @@
                         {{-- send email --}}
 
                         <li><a href="/admin/mail"><i class="icon-book"></i><span class="hidden-tablet">
-                            Send Email</span></a></li>
+                                    Send Email</span></a></li>
 
                         {{-- end of send email --}}
 
@@ -451,15 +488,15 @@
                                 <li><a href="/admin/notice"><i class="icon-book"></i><span class="hidden-tablet">
                                             Notices</span></a></li>
 
-                                
+
                             </ul>
                         </li>
 
                         {{-- end of notice --}}
-                        
+
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
-                                    class="hidden-tablet">Dropdown</span><span class="label label-important"> 
+                                    class="hidden-tablet">Dropdown</span><span class="label label-important">
                                 </span></a>
                             <ul>
                                 <li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span

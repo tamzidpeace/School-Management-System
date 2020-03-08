@@ -18,7 +18,12 @@ class DatabaseSeeder extends Seeder
             ['role_id' => '2', 'name' => 'teacher', 'email' => 'teacher@lms.com', 'password' => bcrypt('11111111'), 'remember_token' =>  Str::random(10),],
         ]);
 
-        DB::table('roles')->insert([['name' => 'Teacher'], ['name' => 'Admin'],]);
+        DB::table('roles')->insert([
+        ['name' => 'Teacher'], 
+        ['name' => 'Admin'],
+        ['name' => 'Staff'],
+        ['name' => 'accountant'],
+        ]);
 
         DB::table('days')->insert([
             ['day' => 'Satarday'],

@@ -103,3 +103,11 @@ Route::get('/admin/users', 'AdminController@users');
 // Notice
 Route::get('/admin/notice', 'AdminController@notices');
 Route::post('/admin/notice', 'AdminController@noticeSave');
+
+//accountant and staff
+Route::get('/admin/user/staffs', 'UserController@staffs');
+Route::get('/admin/user/accountants', 'UserController@accountants');
+Route::get('/admin/user/staff/add', 'UserController@addStaff');
+Route::get('/admin/user/accountant/add', 'UserController@addAccountant');
+Route::post('/admin/user/staff/add/save', 'UserController@addStaffSave');
+Route::post('/admin/user/accountant/add/save', 'UserController@addAccountantSave');
