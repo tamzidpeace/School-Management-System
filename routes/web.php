@@ -101,4 +101,5 @@ Route::get('/admin/mail/user/{email}', 'EmailController@adminUserMail');
 Route::get('/admin/users', 'AdminController@users');
 
 // Notice
-
+Route::get('/admin/notice', 'AdminController@notices');
+Route::post('/admin/notice', 'AdminController@noticeSave');

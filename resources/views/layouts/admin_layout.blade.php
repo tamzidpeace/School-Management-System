@@ -441,6 +441,21 @@
                             Send Email</span></a></li>
 
                         {{-- end of send email --}}
+
+                        {{-- notice --}}
+
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
+                                    class="hidden-tablet">Notice</span></a>
+                            <ul>
+                                <li><a href="/admin/notice"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Notices</span></a></li>
+
+                                
+                            </ul>
+                        </li>
+
+                        {{-- end of notice --}}
                         
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span

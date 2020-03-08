@@ -15,8 +15,8 @@ use App\Imports\StudentsImport;
 use App\Syllabus;
 use App\Syllabuss;
 use App\SchoolInformation;
+use App\Notice;
 use Session;
-
 
 class AdminController extends Controller
 {
@@ -27,7 +27,8 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function users() {
+    public function users()
+    {
         $users = User::all();
         return view('admin.user.users', compact('users'));
     }
@@ -273,5 +274,33 @@ class AdminController extends Controller
     }
 
     // end of school information
-    
+
+    // notice
+    public function notices()
+    {
+        $notices = Notice::all();
+        return view('admin.notice.notices', compact('notices'));
+    }
+
+    public function noticeSave(Request $get)
+    {
+        $notice = new Notice;
+        $notice->title = $get->title;
+        $notice->notice = $get->notice;
+
+        // file processing
+        $file = $get->file('notice-file');       
+        $notice_file = time() . '_' . $file->getClientOriginalName();
+        $file->move('notice/files', $notice_file);
+
+        $notice->file = $notice_file;
+
+        //return $notice;
+
+        $notice->save();
+
+        return back()->with('success', 'Notice published!');
+    }
+
+    // end of notice
 }
