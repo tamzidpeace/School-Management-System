@@ -15,7 +15,7 @@
 
 <div style="margin-top:15px; margin-bottom:15px;" class="form-group">
     {!! Form::label('section', 'Section') !!}
-    {!! Form::select('section', ['' => 'Choice Class'] + $sections, ['class' => 'form-control']) !!}
+    {!! Form::select('section', ['' => 'Choice Section'] + $sections, ['class' => 'form-control']) !!}
 </div>
 
 <div style="margin-top:15px; margin-bottom:15px;" class="form-group">

@@ -111,3 +111,10 @@ Route::get('/admin/user/staff/add', 'UserController@addStaff');
 Route::get('/admin/user/accountant/add', 'UserController@addAccountant');
 Route::post('/admin/user/staff/add/save', 'UserController@addStaffSave');
 Route::post('/admin/user/accountant/add/save', 'UserController@addAccountantSave');
+
+// Promotion 
+Route::get('/admin/session', 'SessionController@index');
+Route::get('/admin/session/store', 'SessionController@store');
+Route::get('/admin/session/change-status/{id}', 'SessionController@changeStatus');
+Route::get('/admin/session/update/view/{id}', 'SessionController@updateSessionView');
+Route::post('/admin/session/update/', 'SessionController@updateSession');

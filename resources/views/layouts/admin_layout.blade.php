@@ -494,6 +494,22 @@
 
                         {{-- end of notice --}}
 
+                        {{-- notice --}}
+
+                        <li>
+                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
+                                    class="hidden-tablet">Promotion</span></a>
+                            <ul>
+                                <li><a href="/admin/session"><i class="icon-book"></i><span class="hidden-tablet">
+                                            Session</span></a></li>
+
+
+                            </ul>
+                        </li>
+
+                        {{-- end of notice --}}
+
+
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span
                                     class="hidden-tablet">Dropdown</span><span class="label label-important">
